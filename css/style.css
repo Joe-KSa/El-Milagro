@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-size: 14px;
+    font-family: "Montserrat";
+}
+
+.navbar-brand img{
+    width: 5em;
+    height: 4em;
+    object-fit: contain;
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+.nav-link.sing-up{
+    padding: 1em;
+    background: rgb(213, 148, 44);
+    color: rgb(250, 241, 228);
+}
+
+.session {
+    text-align: center;
+}
+
+.banner {
+    text-align: center;
+    --bs-gutter-x: 0;
+}
+
+.banner.subtitle {
+    font-size: 14px
+}
+
+.banner-img {
+    height: 25rem;
+}
+
+.banner-img img, .double-img-side div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title, .subtitle {
+    font-family: 'DM Serif Display';
+}
+
+.tl-sct-two {
+    color: rgb(213, 148, 44);
+    font-size: 4em;
+    font-weight: 100;
+}
+
+.double-img-side {
+    height: 30rem;
+}
+
+.double-img-side div{
+    height: 100%;
+}
+
+.aproveed col{
+    color: rgb(68, 54, 43);
+    
+}
+
+.aproveed .number {
+    font-size: 3em;
+}
+
+
+/* Card */
+
+.card {
+    border: 1px solid rgb(213, 148, 44);
+    height: 100%;
+    padding: 2em;
+    border-radius: 0;
+}
+
+.card-header {
+    background-color: #fff;
+}
+
+.card-figure, .card-figure img {
+    height: 100%;
+}
