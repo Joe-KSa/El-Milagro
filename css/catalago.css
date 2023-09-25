@@ -1,0 +1,74 @@
+/* Variables */
+:root {
+    --color-principal: rgb(213, 148, 44);
+    --color-secundario: rgb(241, 241, 241);
+    --color-contenedor: #fff;
+    --estilo-fuente: 'Playfair Display';
+
+}
+
+body {
+    background: var(--color-secundario);
+}
+
+/* section */
+
+.banner-catalogo {
+    background: var(--color-principal);
+    padding: 0.5em;
+}
+
+
+/* side col-3 */
+.card-ad {
+    padding: 2em;
+    border-radius: 1.5em;
+    background: var(--color-secundario);
+    border: none;
+}
+
+.form-switch .form-check-input {
+    width: 3em;
+    height: 1.5em;
+}
+
+.promotion {
+    color: rgb(153, 104, 48);
+    font-style: italic;
+    text-decoration: underline 1px;
+}
+
+.productos .col{
+    margin-bottom: 1em;
+    
+}
+
+.productos .col .card {
+    height: 100%;
+}
+
+.price, .free, .page-item a {
+    color: var(--color-principal);
+}
+
+.pagination  {
+    --bs-pagination-hover-color: var(--color-principal);
+    --bs-pagination-focus-color: var(--color-principal);
+    --bs-pagination-active-border-color: var(--color-principal);
+    
+    --bs-pagination-active-bg: var(--color-principal);
+
+    --bs-pagination-border-width: none;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgb(213, 148, 44, 0.25);
+}
+
+.active>.page-link, .page-link.active {
+    background-color: var(--color-principal);
+    border-color: var(--color-principal);
+}
+
+
+
+/* Page Section */
+
+
