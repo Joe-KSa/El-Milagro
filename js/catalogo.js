@@ -1,4 +1,12 @@
-import { paginas } from './zapatos.js';
+import { catalogo, zapatos } from './zapatos.js';
+
+// var paginas = {
+//     'pagina1' : [],
+//     'pagina2' : []
+// }
+
+
+
 
 $(document).ready(function() {
     var urlParams = new URLSearchParams(window.location.search);
@@ -12,17 +20,21 @@ $(document).ready(function() {
     
             //Agregar cada producto
             for (let product of products) {
+     
                 product.addToPage();
             }
         }, 500);
     }
-
-    if (tienda in paginas){
-        enviarProductos(paginas[tienda]);
-     } else {
+    
+    if (tienda in catalogo){
+        enviarProductos(catalogo[tienda]);
+    
+    } else {
          // Manejo de errores cuando la tienda no existe
         console.log("La tienda especificada en la URL no existe.");
     }
+    
+    
 
 
     // Actualizar la paginación
@@ -52,5 +64,80 @@ $(document).ready(function() {
             window.location.href = 'catalogo.html?tienda=pagina' + (currentPage + 3);
         }
     });
-    
 });
+
+
+// // Función para filtrar y agregar zapatos a las páginas
+// function filtrarYAgregar(zapatos, genero) {
+//     // Filtrar los zapatos por género
+//     let zapatosFiltrados = zapatos.filter(zapato => zapato.genero === genero);
+    
+//     // Dividir los zapatos filtrados en grupos de 8
+//     let grupos = [];
+//     for (let i = 0; i < zapatosFiltrados.length; i += 9) {
+//         grupos.push(zapatosFiltrados.slice(i, i + 9));
+//     }
+    
+//     // Agregar cada grupo a una página
+//     for (let i = 0; i < grupos.length; i++) {
+//         paginas['pagina' + (i + 1)] = grupos[i];
+//     }
+
+//     // Guardar el estado en el almacenamiento local
+//     localStorage.setItem('paginas', JSON.stringify(paginas));
+
+//     // Actualizar la interfaz de usuario en todas las páginas
+//     for (let pagina in paginas) {
+//         enviarProductos(paginas[pagina]);
+//     }
+// }
+
+// // Función para eliminar zapatos de las páginas
+// function eliminar(genero) {
+//     // Recorre todas las páginas
+//     for (let pagina in paginas) {
+//         // Filtra los zapatos que no coinciden con el género
+//         paginas[pagina] = paginas[pagina].filter(zapato => zapato.genero !== genero);
+//     }
+
+//     // Guardar el estado en el almacenamiento local
+//     localStorage.setItem('paginas', JSON.stringify(paginas));
+
+//     // Actualizar la interfaz de usuario en todas las páginas
+//     for (let pagina in paginas) {
+//         enviarProductos(paginas[pagina]);
+//     }
+// }
+
+// $(document).ready(function() {
+//     // Cargar el estado desde el almacenamiento local al inicio
+//     var paginas = JSON.parse(localStorage.getItem('paginas')) || {};
+
+//     // Agrega un evento de escucha a la casilla de verificación del hombre
+//     $('#flexCheckHombre').change(function() {
+//         if($(this).is(":checked")) {
+//             // Si la casilla del hombre está marcada, filtra y agrega los zapatos de hombre
+//             filtrarYAgregar(zapatos, 'hombre');
+//         } else {
+//             // Si la casilla del hombre no está marcada, elimina los zapatos de hombre de las páginas
+//             eliminar('hombre');
+//         } 
+        
+        
+//     })    
+//     // Agrega un evento de escucha a la casilla de verificación de la mujer
+//     $('#flexCheckMujer').change(function() {
+//         if($(this).is(":checked")) {
+//             // Si la casilla de la mujer está marcada, filtra y agrega los zapatos de mujer
+//             filtrarYAgregar(zapatos, 'mujer');
+            
+
+//         } else {
+//          // Si la casilla de la mujer no está marcada, elimina los zapatos de mujer de las páginas
+//             eliminar('mujer');
+            
+//         }
+        
+//     });
+
+// });
