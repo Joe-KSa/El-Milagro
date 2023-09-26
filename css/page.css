@@ -18,6 +18,11 @@ body {
     font-family: "Montserrat";
 }
 
+::selection {
+    background: var(--color-principal); /* Color de fondo al seleccionar */
+    color: black /* Color del texto al seleccionar */
+}
+
 .navbar-brand img{
     width: 5em;
     height: 4em;
@@ -59,4 +64,26 @@ body {
     padding: 0.5em;
     border-radius: 50%;
     margin: 0;
+}
+
+/* Modal */
+
+.btn-color:hover{
+    background: var(--color-principal);
+    color: rgb(250, 241, 228);
+    --bs-nav-underline-border-width: 0;
+    border: none;
+}
+
+.btn-color{
+    background: gray;
+    color: rgb(250, 241, 228);
+    --bs-nav-underline-border-width: 0;
+    border: none;
+}
+
+
+.form-control:focus {
+    box-shadow:  0 0 0.25rem rgba(153, 104, 48,.25);
+    border-color: var(--color-principal);
 }

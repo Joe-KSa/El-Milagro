@@ -68,6 +68,12 @@ body {
 }
 
 
+.productos .card {
+    border: 1px solid var(--color-principal);
+    border-radius: none;
+}
+
+
 
 /* Page Section */
 
