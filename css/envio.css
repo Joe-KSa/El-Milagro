@@ -1,0 +1,32 @@
+.arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    background-color: black;
+    z-index: -1;
+}
+
+
+.arrow-head {
+    position: absolute;
+    right: -6px;
+    top: -4px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+    transform: rotate(90deg);
+}
+
+.diamond {
+    position: absolute;
+    left: 0px;
+    top: -4px;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    transform: rotate(45deg);
+}

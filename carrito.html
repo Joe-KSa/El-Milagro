@@ -61,26 +61,33 @@
     </header>
     <section class="mt-5 mx-5">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-8">
-                    <span class="fs-1 fw-semibold">TU CARRITO</span><br>
-                    <span>Total (1 producto) S/. 99.99</span>
-                    <p class="fs-6">Los articulos en tu carrito no estan reservados. Termina el proceso de compra ahora para hacerte con ellos</p>
-                    <div class="col row row-cols-2 mb-3" style="border: 1px solid #000">
-                        <div class="col-4"><img class="object-fit-contain w-100" src="https://drive.google.com/uc?export=view&id=1PHDue1sg0RTdCvsuVnHys8vkx7JkoY_C" alt="" style="height: 10em;"></div>
-                        <div class="col-8 " style="border-left: 1px solid #000">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <span class="fw-semibold">Botas negras de cuero</span><br>
-                                    <span>Botas negras con cierre y cordones</span>
-                                </div>
-                                <div>
-                                    <span>S/. 99.99</span>
+            <div class="row row-cols-1 row-cols-lg-2">
+
+                <div class="col col-lg-8">
+                    <div>
+                        <span class="fs-1 fw-semibold">TU CARRITO</span><br>
+                        <span>Total (1 producto) S/. 99.99</span>
+                        <p class="fs-6">Los articulos en tu carrito no estan reservados. Termina el proceso de compra ahora para hacerte con
+                            ellos</p>
+                    </div>
+                    <div class="productos-carrito me-lg-3">
+                        <div class="col row row-cols-2 mb-3 alert alert-dismissible fade show" style="border: 1px solid #000">
+                            <div class="col-4"><img class="object-fit-contain w-100" src="https://drive.google.com/uc?export=view&id=1PHDue1sg0RTdCvsuVnHys8vkx7JkoY_C" alt="" style="height: 10em;"></div>
+                            <div class="col-8 " style="border-left: 1px solid #000">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <span class="fw-semibold">Botas negras de cuero</span><br>
+                                        <span>Botas negras con cierre y cordones</span>
+                                    </div>
+                                    <div>
+                                        <span>S/. 99.99</span>
+                                    </div>
                                 </div>
                             </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     </div>
-                    <div>
+                    <div class="d-none d-lg-block">
                         <span class="fw-semibold fs-5">Nuestras recomendaciones</span>
                         <div class="row gap-3">
                             <div class="col border"><img src="" alt=""></div>
@@ -89,9 +96,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 row-cols-lg-1">
+                <div class="col col-lg-4 row-cols-lg-1 pb-5">
                     <div class="col">
-                        <button class="btn btn-color w-100">Ir a pagar</button>
+                        <a href="envio.html"><button class="btn btn-color w-100">Realizar Compra</button></a>
                     </div>
                     <div class="col mt-4">
                         <span class="fw-semibold">RESUMEN DEL PEDIDO</span>
@@ -123,6 +130,7 @@
             </div>
         </div>
     </section>
+    <!-- Modal -->
     <div class="modal fade" id="iniciar" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">

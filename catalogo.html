@@ -65,7 +65,7 @@
                 </div>
             </div>
         </section>
-        <section class="h-100">
+        <section class="">
             <div class="container-fluid px-0">
                 <div class="row mx-0">
                     <div class="col-12 col-lg-3 bg-white mb-3 mb-lg-0">
@@ -80,17 +80,26 @@
                                 <span class="subtitle">En productos pequeños desde s/ 99</span>
                             </div>
                             <div> 
-                                <ul class="list-group-flush mt-3 row row-cols-md-4 row-cols-lg-1">
+                                <ul class="list-group-flush mt-3 row row-cols-1 row-cols-lg-1">
                                     <li class="list-group-item col col-md-3">
                                         <div class="d-flex justify-content-start gap-2 align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrecio">
                                             <span class="">Precio</span>
                                             <span class="dropdown-icon fs-5"><img src="src/dropdown.svg" alt=""></span>
                                         </div>
                                     
-                                        <div class="collapse" id="collapsePrecio">
-                                            <ul class="list-group-flush">
-                                                <li class="list-group-item">Mayor a </li>
-                                            </ul>
+                                        <div class="collapse.show" id="collapsePrecio">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckHombre">
+                                                <label class="form-check-label" for="flexCheckHombre">
+                                                    Mayor a 100
+                                                </label>
+                                              </div>
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckMujer">
+                                                <label class="form-check-label" for="flexCheckMujer">
+                                                    Menor a 100
+                                                </label>
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="list-group-item col col-md-4">
@@ -110,7 +119,7 @@
                                             <span class="">Género</span>
                                             <span class="dropdown-icon fs-5"><img src="src/dropdown.svg" alt=""></span>
                                         </div>
-                                        <div class="collapse.show ms-3" id="collapseGenero">
+                                        <div class="collapse.show" id="collapseGenero">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckHombre">
                                                 <label class="form-check-label" for="flexCheckHombre">
@@ -142,19 +151,29 @@
                                             <span class="">Talla</span>
                                             <span class="dropdown-icon fs-5"><img src="src/dropdown.svg" alt=""></span>
                                         </div>
-                                        <div class="collapse" id="collapseTalla">
+                                        <div class="collapse.show" id="collapseTalla">
                                             <ul class="list-group-flush">
-                                                <li class="list-group-item">Hola</li>
+                                                <li class="list-group-item">30</li>
+                                                <li class="list-group-item">35</li>
                                             </ul>
                                         </div>
                                     </li>
                                 </ul>
+                                <div class="col-12 justify-content-center pb-3">
+                                    <div class="col-12 w-100">
+                                        <span style="font-size: 0.8em;"class="shadow fw-semibold w-100 btn btn-color border px-2" data-bs-toggle="collapse" data-bs-target="#collapsePago" aria-expanded="false" aria-controls="collapsePago">
+                                            Buscar
+                                        </span>
+                                    </div>
+
+                                </div>
                             </div>
                             
                         </div>               
                     </div>
                     
                     <div class="col-12 col-lg-9 ms-0">
+                            
                         <!-- Productos -->
                         <div class="productos row row-cols-lg-3 row-cols-md-2 row-cols-1">
                             <div class="col">

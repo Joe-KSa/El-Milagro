@@ -18,3 +18,6 @@ $(document).ready(function() {
         console.log("El producto especificado en la URL no existe.");
     }
 })
+
+
+

@@ -1,0 +1,8 @@
+.producto-item-block {
+    border-bottom: 2px solid transparent;
+}
+
+.producto-item-block:hover {
+
+    border-bottom-color: #000;
+}

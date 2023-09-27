@@ -40,45 +40,103 @@ class Zapato {
     addDetails(){
         $(".item-producto").append(
             `
-            <div class="col row-cols-1">
-                <div class="col" style="height: 20em"><img class="h-100 w-100 object-fit-contain" src="${this.imagenes.frontal}" alt="" style="object-position: center"></div>
-                <div class="col row row-cols-4">
-                    ${this.imagenes.trasera ? `<div><img class="w-100 h-100" src="${this.imagenes.trasera}" alt=""></div>` : ''}
-                    ${this.imagenes.lateral ? `<div><img class="w-100 h-100" src="${this.imagenes.lateral}" alt=""></div>` : ''}
-                    ${this.imagenes.lateralLeft ? `<div><img class="w-100 h-100" src="${this.imagenes.lateralLeft}" alt=""></div>` : ''}
+            <div class="col row-cols-1 ps-5">
+                <div class="col" style="height: 20em"><img class="h-100 w-100 object-fit-contain img-fondo-producto" src="${this.imagenes.frontal}" alt="" style="object-position: center"></div>
+                <div class="col row row-cols-3 img-preview">
+                    ${this.imagenes.trasera ? `<div class="producto-item-block"><img class="w-100 h-100" src="${this.imagenes.trasera}" alt=""></div>` : ''}
+                    ${this.imagenes.lateral ? `<div class="producto-item-block"><img class="w-100 h-100" src="${this.imagenes.lateral}" alt=""></div>` : ''}
+                    ${this.imagenes.lateralLeft ? `<div class="producto-item-block"><img class="w-100 h-100" src="${this.imagenes.lateralLeft}" alt=""></div>` : ''}
                 </div>
             </div>
-            <div class="col row row-cols-1 border gap-3">
-                <div class="col">
-                    <span class="title">${this.descripcion}</span>
-                </div>
-                <div class="col">
-                    <span class="price">S/. ${this.precio}</span>
-                </div>
-                <div class="col row row-cols-2 justify-content-center">
-                    <div class="col-6 row row-cols-3">
-                        <button class="btn btn-color col-1 pe-4  rounded-0">+</button>
-                        <input type="text" class="border col col-6 rounded-0"></input>
-                        <button class="btn btn-color col-1 pe-4 text-center rounded-0">-</button>
+            <div class="col row row-cols-1 border-0 border-lg gap-3 p-3">
+                <div class="mx-3 row row-cols-1 gap-3">
+                    <div class="col">
+                        <span class="fw-semibold fs-6">${this.descripcion}</span>
                     </div>
-                    <div class="col-6">
-                        <button class="btn btn-color rounded-0" >Añadir a carrito</button>
+                    <div class="col">
+                        <span class="price">S/. ${this.precio}</span>
+                    </div>
+                    <div><input type="color" class="form-control p-0  form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color"></div>
+                    <div class="col row row-cols-2 justify-content-center">
+                        <div class="col-6 row row-cols-3">
+                            <button class="btn btn-color col-1 pe-4  rounded-0">+</button>
+                            <input type="text" class="border col col-6 rounded-0"></input>
+                            <button class="btn btn-color col-1 pe-4 text-center rounded-0">-</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-color rounded-0" >Añadir a carrito</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col row row-cols-1">
+                        <span class="col">Materiales: </span>
+                        <span class="col">Apariencia: </span>
+                        <span class="col">Forro: </span>
+                        <span class="col">Planta: </span>
+                        <span class="col">Altura de taco: </span>
+                    </div>
+                    <div class="col">
+                        <p>!Eleva tu <span>#GottaLook</span> con las zapatillas soñadas! Las plataformas siempre sumarán en tus outfits si te atreves a combinarlas como más te gustan.
+                        El tip más importante para resaltar tus zapatilas es: !Elegir la que está a la altura de tu estilo!</p>
+                    </div>
+                    <div class="info-user row">
+                        <div class="col">
+                            <div class="user-favorite d-flex align-items-center gap-2">
+                                <img src="src/heart.svg" alt="">
+                                <span>Agregar a Favoritos</span>
+                            </div>
+                        </div>
+                        <div class="col user-dislike d-none">
+                            <div class=" d-flex align-items-center gap-2">
+                                <img src="src/dislike.svg" alt="">
+                                <span>Eliminar de Favoritos</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col row row-cols-1">
-                    <span class="col">Materiales: </span>
-                    <span class="col">Apariencia: </span>
-                    <span class="col">Forro: </span>
-                    <span class="col">Planta: </span>
-                    <span class="col">Altura de taco: </span>
-                </div>
-                <div class="col">
-                    <p>!Eleva tu <span>#GottaLook</span> con las zapatillas soñadas! Las plataformas siempre sumarán en tus outfits si te atreves a combinarlas como más te gustan.
-                    El tip más importante para resaltar tus zapatilas es: !Elegir la que está a la altura de tu estilo!</p>
-                </div>
+                
             </div>
         </div>`
         )
+        const imagenes = $('.img-preview div img');
+        const fondo = $('.img-fondo-producto');
+        imagenes.click(function () {
+            let tempSrc = $(this).attr('src');
+            $(this).attr('src', fondo.attr('src'));
+            fondo.attr('src', tempSrc);
+        });
+
+
+
+        $(document).ready(function(){
+
+            $('.user-favorite').on({
+                mouseover: function(){
+                    $('.user-favorite img').attr("src", "src/heart-hover.svg")
+                },
+                mouseout: function(){
+                    $('.user-favorite img').attr("src", "src/heart.svg")
+                },
+                click: function(){
+                    $('.user-favorite img').replaceWith('<img src="src/heart-hover.svg" alt="">')
+                    $('.user-dislike').removeClass("d-none")
+                    $('.user-favorite').off('mouseover mouseout')
+                }
+            })
+        
+            $('.user-dislike').on({
+                click: function(){
+                    $(this).addClass('d-none')
+                    $('.user-favorite img').attr("src", "src/heart.svg")
+                },
+                mouseover: function(){
+                    $('.user-dislike img').attr("src", "src/dislike-hover.svg")
+                },
+                mouseout: function(){
+                    $('.user-dislike img').attr("src", "src/dislike.svg")
+                }
+            })
+        })
     }
 
 
