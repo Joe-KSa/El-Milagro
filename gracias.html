@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Milagro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="shortcut icon" href="src/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header class="">
+        <nav class="navbar">
+            <div class="container-fluid navbar-expand-lg mx-lg-4">
+                <div class="col-lg-2">
+                    <a href="index.html" class="navbar-brand"><img src="src/logo.png" alt=""></a>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-lg-10 collapse navbar-collapse" id="collapsibleNavbar">
+                    <div class="col col-lg-12 ms-2 ms-lg-0 mt-3">
+                        <ul class="navbar-nav nav-underline justify-content-lg-end align-items-lg-center gap-3">
+                            <div class="row session d-lg-none" data-bs-toggle="modal" data-bs-target="#iniciar">
+                                <li class="nav-item col">
+                                    <a class="nav-link register"href="#">Iniciar Sesión</a>
+                                </li>
+                                <li class="nav-item col d-lg-none" data-bs-toggle="modal" data-bs-target="#registrarse">
+                                    <a class="nav-link register "href="#">Registrarse</a>
+                                </li>
+                            </div>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Ofertas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="catalogo.html?tienda=pagina1">Catalogo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contactanos</a>
+                            </li>
+                            <!-- Botones -->
+                            <div class="row session d-none d-lg-block">
+                                <li class="nav-item col" data-bs-toggle="modal" data-bs-target="#iniciar">
+                                    <a class="nav-link register "href="#">Iniciar Sesión</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>                   
+                </div>
+            </div>
+        </nav> 
+    </header>
+    <div class="bg-color" style="height: 3em;"></div>
+    <section class="h-50 mb-5">
+        <div class="container d-flex h-100 justify-content-center">
+            <div class="row row-cols-1 h-100 mt-5 ">
+                <div class="col row row-cols-1 mx-0 gap-3 mb-5">
+                    <div class="col text-center">
+                        <p class="fs-4 fw-semibold">Muchas Gracias por tu compra</p>
+                        <P class="fs-6">Recibiras en aproximadamente 7 días, el tiempo puede variar dependiendo de que tan lejos estés de nuestras oficinas, también puedes hacer un seguimiento comunicándandote con nosotros y te notificaremos al Correo
+                            registrado, mientras esperas tu pedido puedes ver nuestras ofertas y lo nuevo por llegar
+                        </P>
+                    </div>
+                    <div class="col row justify-content-center mx-0">
+                        <div class="col-6 col-lg-4">
+                            <a href="index.html" style="font-size: 1em;"class="shadow fw-semibold w-100 btn btn-color border px-2">
+                                Volver al inicio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-md-end redes mx-0">
+                <div class="col-12 row gap-2 mx-0">
+                    <div class="col-12 d-flex align-items-center justify-content-center gap-3">
+                        <hr style="width: 50px;" >
+                        </hr>
+                        <span style="font-size: small;">NUESTRAS REDES</span>
+                        <hr style="width: 50px;">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="mt-5">
+        <div class="col-12 d-flex justify-content-around gap-3 mt-2">
+            <div class="col-4 d-flex justify-content-center gap-5 mx-0">
+                <figure class="border rounded-4 p-1"><a href="#"><img src="src/instagram.svg" alt=""></a></figure>
+                <figure class="border rounded-4 p-1"><a href="#"><img src="src/facebook.svg" alt=""></a></figure>
+                <figure class="border rounded-4 p-1"><a href="#"><img src="src/youtube.svg" alt=""></a></figure>
+                <figure class="border rounded-4 p-1"><a href="#"><img src="src/twitter.svg" alt=""></a></figure>
+            </div>
+        </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="iniciar" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">!Que bueno tenerte aquí!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input type="email" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="passwordInicio" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="passwordInicio">
+                        <div id="passwordHelp" class="form-text mt-3"><span class="text-color">¿Olvidaste tu contraseña? </span>No te preocupes, pide un código verificador por Correo para cambiar tu contraseña</div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                    </div>
+                    <a type="submit" class="btn w-100 btn-color" href="index.html">Ingresar</a>
+                    <div class="text-center mt-3">
+                        <span>¿Aún no tienes una cuenta? <a href="" class="text-color" data-bs-toggle="modal" data-bs-target="#registrarse">Registrate</a></span>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- Modal Registrarse -->
+    <div class="modal fade" id="registrarse" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">!Que bueno tenerte aquí!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputUsuario" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" maxlength="20">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input type="email" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" maxlength="70">
+                        </div>
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="passwordRegister" class="form-label" maxlength="16">Contraseña</label>
+                        <input type="password" class="form-control" id="passwordRegister">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="remenber">
+                        <label class="form-check-label" for="remenber">Recordarme</label>
+                    </div>
+                    <a type="submit" class="btn w-100 btn-color" href="index.html">Crear Cuenta</a>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</html>
