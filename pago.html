@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Milagro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="shortcut icon" href="src/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header class="">
+        <nav class="navbar">
+            <div class="container-fluid navbar-expand-lg mx-lg-4">
+                <div class="col-lg-2">
+                    <a href="index.html" class="navbar-brand"><img src="src/logo.png" alt=""></a>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-lg-10 collapse navbar-collapse" id="collapsibleNavbar">
+                    <div class="col col-lg-12 ms-2 ms-lg-0 mt-3">
+                        <ul class="navbar-nav nav-underline justify-content-lg-end align-items-lg-center gap-3">
+                            <div class="row session d-lg-none" data-bs-toggle="modal" data-bs-target="#iniciar">
+                                <li class="nav-item col">
+                                    <a class="nav-link register"href="#">Iniciar Sesión</a>
+                                </li>
+                                <li class="nav-item col d-lg-none" data-bs-toggle="modal" data-bs-target="#registrarse">
+                                    <a class="nav-link register "href="#">Registrarse</a>
+                                </li>
+                            </div>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Ofertas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="catalogo.html?tienda=pagina1">Catalogo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contactanos</a>
+                            </li>
+                            <!-- Botones -->
+                            <div class="row session d-none d-lg-block">
+                                <li class="nav-item col" data-bs-toggle="modal" data-bs-target="#iniciar">
+                                    <a class="nav-link register "href="#">Iniciar Sesión</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>                   
+                </div>
+            </div>
+        </nav> 
+    </header>
+    <div class="bg-color" style="height: 3em;"></div>
+    <section class="mt-4 pb-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <div class="mx-4 p-3">
+                        <div class="mt-1 row row-cols-1 gap-3">
+                            <div class="col">
+                                <span class="fw-semibold fs-5">Información de facturación</span><br>
+                                <span>No compartiremos su información con el público</span>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" placeholder="Número de Tarjeta" style="font-size: 0.9em;">
+                            </div>
+                            <div class="col row mx-0">
+                                <div class="col-6 ps-0">
+                                    <input class="form-control" type="date" placeholder="Vencimiento" style="font-size: 0.9em;">
+                                </div>
+                                <div class="col-6 pe-0">
+                                    <input class="form-control" type="text" placeholder="Csc" style="font-size: 0.9em;">
+                                </div>
+                            </div>
+                            <div class="col row mx-0">
+                                <div class="col-6 ps-0">
+                                    <input class="form-control" type="text" placeholder="Nombre" style="font-size: 0.9em;">
+                                </div>
+                                <div class="col-6 pe-0">
+                                    <input class="form-control" type="text" placeholder="Apellido" style="font-size: 0.9em;">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="fw-semibold fs-5">Dirección de Facturación</span>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" placeholder="Linea de dirección 1" style="font-size: 0.9em;">
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" placeholder="Linea de dirección 2" style="font-size: 0.9em;">
+                            </div>
+                            <div class="col row mx-0">
+                                <div class="col-6 ps-0">
+                                    <input class="form-control" type="date" placeholder="Codigo Postal" style="font-size: 0.9em;">
+                                </div>
+                                <div class="col-6 pe-0">
+                                    <input class="form-control" type="text" placeholder="Ciudad" style="font-size: 0.9em;">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" placeholder="Provincia/Ciudad autonoma" style="font-size: 0.9em;">
+                            </div>
+                            <div class="col">
+                                <span class="fw-semibold fs-5">Información de contacto</span>
+                            </div>
+                            <div class="col row mx-0">
+                                <div class="col-6 ps-0">
+                                    <input class="form-control" type="date" placeholder="País" style="font-size: 0.9em;">
+                                </div>
+                                <div class="col-6 pe-0">
+                                    <input class="form-control" type="text" placeholder="Número de Telefono" style="font-size: 0.9em;">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="email" placeholder="Correo Electrónico" style="font-size: 0.9em;">
+                            </div>
+                            <div class="col">
+                                <div class="form-check d-flex gap-2">
+                                    <input type="checkbox" class="form-check-input p-2" id="terminos">
+                                    <label class="form-check-label" for="terminos" style="font-size: 0.8em;">
+                                        He leido y acepto los <span><a href="" class="text-color">Terminos y condiciones</a></span>. Los terminos y condiciones de venta
+                                        aqui establecidos están vigentes para todo tipo de relación comercial con los clientes de esta empresa ya sea por
+                                        concepto o razón de contratos, pagos, entregas y otros servicios, incluyendo prestación de soluciones técnicas.
+                                    </label>
+                                </div>
+                            
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" placeholder="Código Promocional" style="font-size: 0.8em;">
+                            </div>
+                            <div class="col row justify-content-center">
+                                <div class="col-6 ">
+                                    <span style="font-size: 0.8em;"class="shadow fw-semibold w-100 btn btn-color border px-2" data-bs-toggle="collapse" data-bs-target="#collapsePago">
+                                        Realizar Pago
+                                    </span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+                <div class="col d-none d-lg-block">
+                    <div class="row align-items-center h-100">
+                        <img src="src/zapatos-Banner-Pago.jpeg" alt="" class="rounded-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</html>

@@ -92,3 +92,9 @@ body {
 .bg-color {
     background: var(--color-principal);
 }
+
+@media (max-width: 960px) {
+    .nav-underline .nav-link:focus, .nav-underline .nav-link:hover {
+        border-bottom-color: transparent;
+    }
+}

@@ -64,7 +64,7 @@ class Zapato {
                             <button class="btn btn-color col-1 pe-4 text-center rounded-0">-</button>
                         </div>
                         <div class="col-6">
-                            <button class="btn btn-color rounded-0" >Añadir a carrito</button>
+                            <a class="btn btn-color rounded-0" href="carrito.html">Añadir a carrito</a>
                         </div>
                     </div>
                     
