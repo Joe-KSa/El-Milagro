@@ -1,4 +1,4 @@
-import { catalogo, zapatos } from './zapatos.js';
+import { catalogo, zapatos} from './zapatos.js';
 
 // var paginas = {
 //     'pagina1' : [],
@@ -65,4 +65,5 @@ $(document).ready(function() {
         }
     });
 });
+
 

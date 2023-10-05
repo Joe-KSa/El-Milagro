@@ -24,8 +24,12 @@ class Zapato {
                         <div class="col">
                             <span class="price">S/. ${this.precio}</span>
                         </div>
-                        <div class="col">
-                            <span class="free">Envió Gratis</span>    
+                        <div class="col row justify-content-center mx-0 p-0">
+                                <div class="col-6 ">
+                                    <button type="button" style="font-size: 0.8em;"class="shadow fw-semibold w-100 btn btn-color border px-2 liveToastBtn">
+                                        Añadir a Carrito
+                                    </button>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -33,8 +37,16 @@ class Zapato {
         `);
         $(".zapatos-img").css({'height': '15em'})
         $(".zapatos-img img").css({'height': '100%', 'object-fit': 'contain', 'width': '100%', 'scale': '1.2', 'object-position': 'top'})
-                
+        
+        $(document).ready(function(){
+            $('.liveToastBtn').click(function(){
+                var toastLiveExample = $('#liveToast')
+                var toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                toastBootstrap.show()
+            });
+        });
     }
+    
 
 
     addDetails(){
@@ -197,6 +209,7 @@ function filtrarYAgregar(zapatos) {
 
 // Usar la función para filtrar por género 'mujer' y agregar a las páginas
 filtrarYAgregar(zapatos);
-console.log(catalogo)
 
 export {catalogo, zapatos}
+
+
